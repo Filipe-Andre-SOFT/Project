@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simoldes Connect - Produção</title>
+  <link rel="stylesheet" href="Dashborad_Estilo.css" />
+</head>
+<body>
+  
+  <div class="container">
+    <div class="header">
+      <img src="simoldes_connect_logo_transparente_menor-removebg-preview.png" alt="Logo Simoldes" class="logo" />
+    </div>
+    <div class="main">
+      <div class="dashboard-box">
+        <div class="menu">
+          <button type="button" id="btnAbrir">🔧 Abrir Produção</button>
+          <button type="button" id="btnFechar">❌ Fechar Produção</button>
+          <button type="button" id="btnFinalizar">✅ Finalizar Produção</button>
+          <button type="button" id="btnListaProgramas">📂 Lista de Processos</button>
+          <!-- botão de “Lista de Processos” removido -->
+        </div>
+        <div class="viewer">
+
+          <!-- Busca para pasta referência -->
+          <div class="search-box">
+            <input type="text" placeholder="🔍 Buscar referência (REFE)..." />
+            <button type="button">Buscar Referência</button>
+          </div>
+
+          <div class="image-box" id="img-box">
+            <img src="imagens_test\Diagrama_1.jpg" alt="Imagem do Esquema" id="imagemExibida" />
+          </div>
+
+          <div class="relogio" id="clock">--:--</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Program.js" defer></script>
+</body>
+</html>

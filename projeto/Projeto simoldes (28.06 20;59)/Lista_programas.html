@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visualizador PowerMILL</title>
+  <link rel="stylesheet" href="Programas_style.css"/>
+</head>
+<body>
+  <div class="logo">
+    <img src="simoldes_connect_logo_transparente_menor-removebg-preview.png" alt="Simoldes Connect"/>
+    <button id="btnVoltarDashboard">Voltar para o Dashboard</button>
+  </div>
+
+  <main class="container">
+    <!-- Seletor de arquivos -->
+    <div class="search-box">
+      <input type="file" id="fileInput" accept=".jpg" multiple />
+
+    </div>
+
+    <!-- Lista de IDs extraídos -->
+    <div class="tool-list">
+      <ul id="listaFerramentas"></ul>
+    </div>
+
+    <!-- Detalhes da ferramenta selecionada -->
+    <div class="tool-details" hidden>
+      <h2 id="toolName"></h2>
+      <table id="toolAttributes">
+        <tr><th>Campo</th><th>Valor</th></tr>
+      </table>
+    </div>
+  </main>
+<!-- Coloque isto no <head> ou logo antes do seu JS -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="visualizador_pmlents.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+          <!-- Busca para programa executando -->
+          <div class="search-box">
+            <input type="text" id="searchPrograma" placeholder="🔍 Buscar programa..." />
+            <button id="btnBuscarPrograma">Buscar Programa</button>
+          </div>

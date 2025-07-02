@@ -1,0 +1,212 @@
+/* Reset e base */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #474747;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 140px; /* Espaço para header fixo */
+}
+
+/* Header com logo e título */
+.header {
+  width: 100%;
+  background: linear-gradient(to bottom left, #00d011, #00930c, #004906);
+  border-bottom: 5px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  height: 100px;
+  display: block;
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* Botão "Voltar para o Dashboard" */
+#btnVoltarDashboard {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  background-color: #015011;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#btnVoltarDashboard:hover,
+#btnVoltarDashboard:focus {
+  background-color: #00b42a;
+  outline: 3px solid #00b42a;
+}
+
+#btnVoltarDashboard:active {
+  transform: translateY(-50%) scale(0.97);
+}
+
+/* Container layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin-top: 40px;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout da área principal */
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse; /* lista no lado direito */
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+/* Seção de lista (usa container secundário) */
+.list-section {
+  width: 40%;
+}
+
+.list-section ul {
+  list-style: none;
+}
+
+.list-section li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background-color: #015011;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.list-section li:hover,
+.list-section li:focus {
+  background-color: #00b42a;
+  outline: 3px solid #00b42a;
+}
+
+.list-section li.selected {
+  background-color: #c8e6c9;
+  color: #000;
+  outline: 3px solid #00b42a;
+}
+
+/* Seção de ação */
+.action-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.action-section #btnAprovar {
+  padding: 12px 20px;
+  background-color: #015011;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-section #btnAprovar:hover,
+.action-section #btnAprovar:focus {
+  background-color: #00b42a;
+  outline: 3px solid #00b42a;
+}
+
+/* Toast message (aproveita tema escuro) */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #323232;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.hidden {
+  display: none;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+    height: 70px;
+  }
+
+  #btnVoltarDashboard {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .container {
+    margin-top: 20px;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .list-section,
+  .action-section {
+    width: 100%;
+  }
+}

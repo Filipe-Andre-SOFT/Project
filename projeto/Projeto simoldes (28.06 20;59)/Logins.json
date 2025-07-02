@@ -1,0 +1,12 @@
+[
+  {
+    "usuario": "maquina_1",
+    "senha": "senha123",
+    "tipo": "operador"
+  },
+  {
+    "usuario": "admin",
+    "senha": "admin123",
+    "tipo": "admin"
+  }
+]

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finalizar Produção</title>
+  <link rel="stylesheet" href="Finalizar.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <img
+          src="simoldes_connect_logo_transparente_menor-removebg-preview.png"
+          alt="Logo Simoldes"
+          class="logo"
+        />
+        <button
+          id="btnVoltarDashboard"
+          aria-label="Voltar para o Dashboard"
+        >
+          Voltar para o Dashboard
+        </button>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="list-section">
+        <ul id="approvalList">
+          <!-- Exemplo de itens; serão substituídos dinamicamente -->
+          <li data-maquina="F2000" data-molde="1658_18">
+            Máquina: F2000 | Molde: 1658_18
+          </li>
+          <li data-maquina="G3000" data-molde="1720_05">
+            Máquina: G3000 | Molde: 1720_05
+          </li>
+          <li data-maquina="H4500" data-molde="1845_22">
+            Máquina: H4500 | Molde: 1845_22
+          </li>
+        </ul>
+      </section>
+      <section class="action-section">
+        <button type="button" id="btnAprovar">Aprovar</button>
+      </section>
+    </main>
+    <!-- Mensagem de confirmação -->
+    <div id="toastMessage" class="toast hidden">
+      Aprovado!
+    </div>
+  </div>
+  <!-- Script específico -->
+  <script src="Finalizar.js" defer></script>
+</body>
+</html>
